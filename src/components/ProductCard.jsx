@@ -15,25 +15,28 @@ const ProductCard = (props) => {
   return (
     <>
       <div
-        className={`${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}
+        className={`${
+          location.pathname == "/product" ? `gr-${grid}` : "col-3"
+        }`}
       >
-        <Link to=":id" className="product-card position-relative">
+        <Link
+          to={`${
+            location.pathname == "/"
+              ? "/product/:id"
+              : location.pathname == "/product/:id"
+              ? "/product/:id"
+              : ":id"
+          }`}
+          className="product-card position-relative"
+        >
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
               <img src={wish} alt="wishlist" />
             </button>
           </div>
           <div className="product-image">
-            <img
-              src={watch}
-              className="img-fluid"
-              alt="product image"
-            />
-            <img
-              src={watch2}
-              className="img-fluid"
-              alt="product image"
-            />
+            <img src={watch} className="img-fluid" alt="product image" />
+            <img src={watch2} className="img-fluid" alt="product image" />
           </div>
           <div className="product-details">
             <h6 className="brand">Apple</h6>
@@ -47,7 +50,7 @@ const ProductCard = (props) => {
               edit={false}
               activeColor="#ffd700"
             />
-            <p className= {`description ${grid === 12 ? "d-block" : "d-none"}`}>
+            <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam, omnis quibusdam eius deserunt iusto at illum atque
               aliquam quae sit tempora, molestias placeat, modi nesciunt. Vitae,
@@ -71,25 +74,28 @@ const ProductCard = (props) => {
         </Link>
       </div>
       <div
-        className={`${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}
+        className={`${
+          location.pathname == "/product" ? `gr-${grid}` : "col-3"
+        }`}
       >
-        <Link className="product-card position-relative">
+        <Link
+          to={`${
+            location.pathname == "/"
+              ? "/product/:id"
+              : location.pathname == "/product/:id"
+              ? "/product/:id"
+              : ":id"
+          }`}
+          className="product-card position-relative"
+        >
           <div className="wishlist-icon position-absolute">
             <button className="border-0 bg-transparent">
               <img src={wish} alt="wishlist" />
             </button>
           </div>
           <div className="product-image">
-            <img
-              src={watch}
-              className="img-fluid"
-              alt="product image"
-            />
-            <img
-              src={watch2}
-              className="img-fluid"
-              alt="product image"
-            />
+            <img src={watch} className="img-fluid" alt="product image" />
+            <img src={watch2} className="img-fluid" alt="product image" />
           </div>
           <div className="product-details">
             <h6 className="brand">Apple</h6>
@@ -103,7 +109,7 @@ const ProductCard = (props) => {
               edit={false}
               activeColor="#ffd700"
             />
-            <p className= {`description ${grid === 12 ? "d-block" : "d-none"}`}>
+            <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laboriosam, omnis quibusdam eius deserunt iusto at illum atque
               aliquam quae sit tempora, molestias placeat, modi nesciunt. Vitae,
