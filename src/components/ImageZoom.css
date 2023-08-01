@@ -1,0 +1,33 @@
+.magnify {
+  position: absolute;
+  /* display: none; */
+  /* background-repeat: no-repeat; */
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 9999px;
+
+  width: 200px;
+  height: 200px;
+  background-size: 800%;
+  /* background-position: center; */
+  pointer-events: none;
+  transform: scale(0);
+  animation: scaleUp 400ms ease-in forwards;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.no-cursor {
+    cursor: none;
+  }
